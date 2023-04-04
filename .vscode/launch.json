@@ -1,0 +1,46 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'far-cry-5-affinity'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=far-cry-5-affinity",
+                    "--package=far-cry-5-affinity"
+                ],
+                "filter": {
+                    "name": "far-cry-5-affinity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'far-cry-5-affinity'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=far-cry-5-affinity",
+                    "--package=far-cry-5-affinity"
+                ],
+                "filter": {
+                    "name": "far-cry-5-affinity",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+            
+        }
+    ]
+}
