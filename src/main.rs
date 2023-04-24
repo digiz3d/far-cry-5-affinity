@@ -65,7 +65,7 @@ fn get_process_id_by_name(input_process_name: String) -> Option<DWORD> {
 
             let input_slice: &[i8] = unsafe {
                 let l = name_i8.len();
-                std::slice::from_raw_parts(name_i8.as_ptr() as *const i8, l)
+                std::slice::from_raw_parts(name_i8.as_ptr(), l)
             };
 
             let transmuted_input = unsafe { std::mem::transmute::<&[i8], &[u8]>(input_slice) };
